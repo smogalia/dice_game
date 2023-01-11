@@ -22,13 +22,14 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="text-center">Dice game</h1>
-                    <h2 class="text-center">Jeu de dés</h2>
-                </div>
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">Dice game</h1>
+                <h2 class="text-center">Jeu de dés</h2>
             </div>
+        </div>
+    </header>
+        <div class="container">
             <div class="row">
                 <div class="col-12">
                     <button type="button" class="btn btn-success btn-lg mx-auto d-block" id="reset">Nouvelle partie</button>
@@ -74,7 +75,57 @@
                 </div>
             </div>
         </div>
-    </header>
+        </div>
+    <footer class="container">
+        <div class="row">
+            <div class="col-12">
+                            <!-- Button trigger modal -->
+<button type="button" class="btn btn-warning btn-lg mx-auto d-block" data-bs-toggle="modal" data-bs-target="#regles">
+    Règles
+  </button>
+            </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="regles" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Règle du jeu</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Bienvenue sur le jeu Dice Game.</p>
+            <p>Les règles sont simples. </p>
+            <p>À chaque tour, le joueur peut lancer un dé autant de fois qu'il le souhaite. Le
+            résultat des lancers sont ajoutés.</p>
+            <p>Lors de son tour, le joueur peut décider à tout moment de:
+            - Cliquer sur l’option "garder", qui permet de préserver ses points. Ce sera alors le
+            tour de l’autre joueur.
+            - Lancer le dé. S’il obtient un 1, son score temporaire est perdu et c’est la fin de son tour.
+            Le premier joueur qui atteint un total de 100 points gagne le jeu.
+            </p>
+            <p>Bonne chance.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary">J'ai compris</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+            <div class="col-12">
+                <p class="text-center">smogalia 2023</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+   
 
 
 
