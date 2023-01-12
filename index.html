@@ -40,20 +40,27 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <p class="text-center" id="player_selected">tour</p>
+                                <p class="text-center" id="player_selected"></p>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4 col-12 d-flex justify-content-center">
-                                <p class="text-center">Le joueur 1 a obtenu <span id="result1"></span></p>
+                            <div class="col-md-4 col-12 d-flex justify-content-center" id="player1">
+                                <div class="row">
+                                    <div>Joueur 1 <span id="player1_selected"></span>
+                                    </div>
+                                    <div id="total1">total <span id="result1"></span>
+                                    </div>
+                                </div>
+                                
                             </div>
                             <div class="col-md-4 col-12 d-flex justify-content-center">
-                                <div>
-                                    <img src="assets/img/face-1.png" alt="dé face 1" class="img-fluid" id="face1">
-                                </div>
+                                
                                 <div class="row">
                                     <div class="col-12">
-                                        <p class="text-center" id="score"></p>
+                                        <div>
+                                            <img src="assets/img/face-1.png" alt="dé face 1" class="img-fluid" id="dice">
+                                        </div>
+                                <p class="text-center" id="score">0</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -63,8 +70,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-12 d-flex justify-content-center">
-                                <p class="text-center">Le joueur 2 a obtenu <span id="result2"></span></p>
+                            <div class="col-md-4 col-12 d-flex justify-content-center" id="player2">
+                                <div class="row">
+                                    <div>Joueur 2 <span id="player2_selected"></span>
+                                    </div>
+                                    <div id="total2">total <span id="result2"></span>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                         <div class="row">
@@ -91,25 +104,26 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Règle du jeu</h1>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Règles du jeu</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <p>Bienvenue sur le jeu Dice Game.</p>
             <p>Les règles sont simples. </p>
-            <p>À chaque tour, le joueur peut lancer un dé autant de fois qu'il le souhaite. Le
-            résultat des lancers sont ajoutés.</p>
-            <p>Lors de son tour, le joueur peut décider à tout moment de:
-            - Cliquer sur l’option "garder", qui permet de préserver ses points. Ce sera alors le
-            tour de l’autre joueur.
-            - Lancer le dé. S’il obtient un 1, son score temporaire est perdu et c’est la fin de son tour.
-            Le premier joueur qui atteint un total de 100 points gagne le jeu.
-            </p>
+            <p>Le jeu comprend 2 joueurs sur un seul et même écran.</p>
+            <p>Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL).</p>
+            <p>À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le 
+                résultat d’un lancer est ajouté au ROUND. </p>
+            <p>Lors de son tour, le joueur peut décider à tout moment de:</p>
+            <p>- Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le GLOBAL. Ce sera alors le
+                tour de l’autre joueur.</p>
+            <p>
+                - Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.</p>
+                <p>Le premier joueur qui atteint les 100 points sur global gagne le jeu</p>
             <p>Bonne chance.</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="button" class="btn btn-primary">J'ai compris</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer</button>
         </div>
       </div>
     </div>
