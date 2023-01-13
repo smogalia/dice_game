@@ -6,7 +6,7 @@
     background-color: rgba(255, 0, 0, 0.469);
 }
 
-#player1_selected, #player2_selected{
+#player1_coin, #player2_coin{
     border-radius: 50%;
     background: red;
     opacity: 0;
