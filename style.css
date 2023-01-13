@@ -1,16 +1,41 @@
-#total1{
+/* #player1{
     background-color: rgba(0, 0, 255, 0.476);
 }
 
-#total2{
+#player2{
     background-color: rgba(255, 0, 0, 0.469);
-}
+} */
 
 #player1_coin, #player2_coin{
     border-radius: 50%;
-    background: red;
     opacity: 0;
     padding: 2px 10px;
     margin-left: 5px;
     transition: all ease-in-out .5s;
+}
+
+#player1_coin{
+    background: blue;
+}
+#player2_coin{
+    background: red;
+}
+
+#total1{
+    color: rgb(3, 3, 233);
+}
+#total2{
+    color: rgb(233, 3, 3);
+}
+
+#result1, #result2{
+    color: white;
+}
+
+#total1,#total2,#result1,#result2{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
