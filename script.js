@@ -29,6 +29,13 @@ reset.addEventListener("click", function () {
     global_player2 = 0;
     count = 0;
 
+    //active les boutons
+    roll.disabled = false;
+    hold.disabled = false;
+
+    //réinitialise le texte du gagnant
+    winner.innerText = "";
+
     //définir le joueur qui commence
     player_turn= Math.floor(Math.random() * 2) + 1;
     newRound();
@@ -51,7 +58,6 @@ hold.addEventListener("click", function () {
             winner.innerText = "Joueur 2 a gagné";
             winner.style.color = "red";
             endGame();
-  
         }
     }
     newRound();
@@ -119,6 +125,13 @@ function rollDice() {
 
 //animation du dé
 function DiceAnimation() {
+    playSound();
     a=rollDice();
     dice.setAttribute('src', './assets/img/face-' + a + '.png');
+}
+
+//son du dé
+function playSound() {
+    let dice= new Audio('./assets/sound/dice.mp3');
+    dice.play();
 }
