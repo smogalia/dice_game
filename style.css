@@ -6,6 +6,15 @@
     transition: all ease-in-out .5s;
 }
 
+#dice{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out .5s;
+}
+
 #player1_coin{
     background: blue;
 }
@@ -13,10 +22,10 @@
     background: red;
 }
 
-#global1{
+#global1,#player1_selected{
     color: rgb(3, 3, 233);
 }
-#global2{
+#global2,#player2_selected{
     color: rgb(233, 3, 3);
 }
 
@@ -42,4 +51,8 @@
 
 #winner{
    font-size: 40px;
+}
+
+#round1,#round2{
+    color: white;
 }
