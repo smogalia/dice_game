@@ -104,6 +104,7 @@ roll.addEventListener("click", function () {
     DiceAnimation();
     //si le joueur fait un 1, il perd son score et le tour passe au joueur suivant
     if(a === 1){
+        playSoundFail();
         count = 0;
         newRound();
     }
@@ -132,6 +133,12 @@ function DiceAnimation() {
 
 //son du dé
 function playSound() {
-    let dice= new Audio('./assets/sound/dice.mp3');
-    dice.play();
+    let dicesound= new Audio('./assets/sounds/dice.wav');
+    dicesound.play();
+}
+
+//son echec
+function playSoundFail() {
+    let looser= new Audio('./assets/sounds/looser.wav');
+    looser.play();
 }
