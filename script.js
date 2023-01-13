@@ -17,6 +17,7 @@ let player2_coin = document.getElementById("player2_coin");
 let reset = document.getElementById("reset");
 let hold = document.getElementById("hold");
 let player_turn;
+let target=100;
 let winner = document.getElementById("winner");
 
 //nouvelle partie
@@ -36,16 +37,32 @@ reset.addEventListener("click", function () {
 hold.addEventListener("click", function () {
     //enregistre le score du joueur en fonction de son tour
     if (player_turn === 1) {
-       
         global_player1 += count;
         global1.innerText = global_player1;
+        if(global_player1 >= target){
+            winner.innerText = "Joueur 1 a gagné";
+            winner.style.color = "blue";
+            endGame();
+        }
     } else {
-        
         global_player2 += count;
         global2.innerText = global_player2;
+        if(global_player2 >= target){
+            winner.innerText = "Joueur 2 a gagné";
+            winner.style.color = "red";
+            endGame();
+  
+        }
     }
     newRound();
 });
+
+//désactive les boutons quand le jeu est fini
+function endGame(){
+    roll.disabled = true;
+    hold.disabled = true;
+}
+
 
 //indique le joueur qui doit jouer
 function newRound(){
