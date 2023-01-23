@@ -17,7 +17,7 @@ let player2_coin = document.getElementById("player2_coin");
 let reset = document.getElementById("reset");
 let hold = document.getElementById("hold");
 let player_turn;
-let target=100;
+let target=10;
 let winner = document.getElementById("winner");
 
 //désactive les boutons avant le lancement du jeu
@@ -67,10 +67,11 @@ hold.addEventListener("click", function () {
     newRound();
 });
 
-//désactive les boutons quand le jeu est fini
+//désactive les boutons quand le jeu est fini et joue le son victoire
 function endGame(){
     roll.disabled = true;
     hold.disabled = true;
+    playSoundWin();
 }
 
 
@@ -149,4 +150,10 @@ function playSound() {
 function playSoundFail() {
     let looser= new Audio('./assets/sounds/looser.wav');
     looser.play();
+}
+
+//son victoire
+function playSoundWin() {
+    let winner= new Audio('./assets/sounds/applause.mp3');
+    winner.play();
 }
