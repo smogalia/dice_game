@@ -56,3 +56,18 @@
 #round1,#round2{
     color: white;
 }
+
+
+/* keyframes pour l'animation du dé */
+@keyframes roll {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    25% { transform: rotateX(360deg) rotateY(360deg); }
+    50% { transform: rotateX(360deg) rotateY(360deg); }
+    75% { transform: rotateX(360deg) rotateY(360deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* Application de l'animation à la classe dice_animation */
+.dice_animation {
+    animation: roll 1s ease-out;
+}

@@ -5,9 +5,9 @@ let count;
 let result1 = document.getElementById("result1");
 let result2 = document.getElementById("result2");
 let global1 = document.getElementById("global1");
+let global2 = document.getElementById("global2");
 let global_player1;
 let global_player2;
-let global2 = document.getElementById("global2");
 let player1 = document.getElementById("player1");
 let player2 = document.getElementById("player2");
 let player1_selected = document.getElementById("player1_selected");
@@ -19,6 +19,10 @@ let hold = document.getElementById("hold");
 let player_turn;
 let target=100;
 let winner = document.getElementById("winner");
+
+//désactive les boutons avant le lancement du jeu
+roll.disabled = true;
+hold.disabled = true;
 
 //nouvelle partie
 reset.addEventListener("click", function () {
@@ -128,7 +132,11 @@ function rollDice() {
 function DiceAnimation() {
     playSound();
     a=rollDice();
-    dice.setAttribute('src', './assets/img/face-' + a + '.png');
+    dice.classList.add("dice_animation");
+    setTimeout(function () {
+        dice.classList.remove("dice_animation");
+        dice.src = "./assets/img/face-" + a + ".png";
+    }, 500);
 }
 
 //son du dé
