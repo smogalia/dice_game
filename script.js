@@ -17,7 +17,7 @@ let player2_coin = document.getElementById("player2_coin");
 let reset = document.getElementById("reset");
 let hold = document.getElementById("hold");
 let player_turn;
-let target=10;
+let target=100;
 let winner = document.getElementById("winner");
 
 //désactive les boutons avant le lancement du jeu
