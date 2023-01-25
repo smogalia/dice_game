@@ -1,6 +1,5 @@
 let dice = document.getElementById("dice");
 let roll = document.getElementById("role_dice");
-
 let count;
 let result1 = document.getElementById("result1");
 let result2 = document.getElementById("result2");
@@ -25,7 +24,7 @@ roll.disabled = true;
 hold.disabled = true;
 
 //nouvelle partie
-reset.addEventListener("click", function () {
+reset.addEventListener("click", () => {
     //réinitialise les scores
     global1.innerText = 0;
     global2.innerText = 0;
@@ -45,7 +44,7 @@ reset.addEventListener("click", function () {
     newRound();
 });
 
-hold.addEventListener("click", function () {
+hold.addEventListener("click", () => {
     //enregistre le score du joueur en fonction de son tour
     if (player_turn === 1) {
         global_player1 += count;
@@ -105,7 +104,7 @@ function newRound(){
 
 
 //la fonction qui permet de lancer le dé
-roll.addEventListener("click", function () {
+roll.addEventListener("click", ()=> {
     DiceAnimation();
     //si le joueur fait un 1, il perd son score et le tour passe au joueur suivant
     if(a === 1){
@@ -125,7 +124,7 @@ roll.addEventListener("click", function () {
 });
 
 //résultat du dé
-function rollDice() {
+rollDice = () => {
   return Math.floor(Math.random() * 6) + 1;
 }
 
@@ -134,7 +133,7 @@ function DiceAnimation() {
     playSound();
     a=rollDice();
     dice.classList.add("dice_animation");
-    setTimeout(function () {
+    setTimeout( () => {
         dice.classList.remove("dice_animation");
         dice.src = "./assets/img/face-" + a + ".png";
     }, 500);
